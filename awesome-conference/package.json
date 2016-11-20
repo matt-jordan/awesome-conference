@@ -1,0 +1,41 @@
+{
+  "name": "awesome-conference",
+  "version": "0.0.1",
+  "description": "A super awesome conference for IoT shenaniganry",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "lint": "eslint .",
+    "test": "npm run lint && mocha",
+    "mocha": "mocha",
+    "cover": "istanbul cover --report html _mocha"
+  },
+  "engines": {
+    "node": "^6.2.2",
+    "npm": "^3.9.6"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ari-client": "^1.1.0",
+    "bunyan": "^1.4.0",
+    "bunyan-format": "^0.2.1",
+    "bunyan-middleware": "^0.2.1",
+    "chai": "^3.2.0",
+    "chance": "^1.0.4",
+    "config": "^1.21.0",
+    "env-test": "^1.0.0",
+    "eslint": "^3.3.0",
+    "eslint-config-airbnb-base": "^5.0.2",
+    "eslint-plugin-import": "^1.13.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "lodash": "^4.13.1",
+    "mocha": "^2.2.5",
+    "node-uuid": "^1.4.3",
+    "request": "^2.78.0",
+    "respoke-admin": "^1.9.0",
+    "uuid": "^2.0.3"
+  }
+}

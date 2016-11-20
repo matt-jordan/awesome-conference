@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="conference">
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.js"></script>
+    <script src="https://cdn.respoke.io/respoke.min.js"></script>
+    <script src="conference.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.4/webcam.min.js"></script>
+  </head>
+  <body ng-controller="AppController">
+    <div class="main">
+      <video id="video-remote"></video>
+    </div>
+    <div class="people">
+      <div ng-repeat="(endpoint, imageContents) in people" ng-class="getPersonClass(endpoint)" ng-click="setVideoSource(endpoint)">
+        <pic base64="imageContents"></pic>
+      </div>
+      <div class="respoke">
+        Powered by <a href="http://www.asterisk.org" target="_blank">Asterisk</a> and <a href="https://www.respoke.io" target="_blank">Respoke!</a>
+      </div>
+    </div>
+    <camera></camera>
+  </body>
+</html>

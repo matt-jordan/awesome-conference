@@ -1,0 +1,46 @@
+---
+version: '2'
+services:
+  asterisk:
+    image: asterisk-iot/asterisk
+    build:
+      context: asterisk
+    environment:
+      APPLICATION_NAME: super-conference
+      ARI_PASSWORD: zomgnotsafe!
+      RESPOKE_ENDPOINT: webrtc
+    volumes:
+      - astdb:/var/lib/asterisk
+      - keys:/etc/asterisk/keys
+    network_mode: host
+
+  awesome-conference:
+    image: asterisk-iot/awesome-conference
+    build:
+      context: awesome-conference
+    environment:
+      PORT: 3000
+      HOST: ${EXTERNAL_IP}
+      RESPOKE_ENDPOINT: webrtc
+      ARI_PASSWORD: zomgnotsafe!
+      APPLICATION: super-conference
+      APP_SECRET:  XXXX
+      APP_ID: YYYY
+      ENDPOINT_ROLE_ID: ZZZZ
+    depends_on:
+      - asterisk
+    networks:
+      - common
+    ports:
+      - "3000:3000"
+    volumes:
+      - keys:/etc/asterisk/keys
+    restart: always
+
+volumes:
+  astdb: {}
+  keys: {}
+
+networks:
+  common:
+    driver: bridge

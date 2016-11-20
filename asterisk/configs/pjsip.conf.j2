@@ -1,0 +1,22 @@
+{%- set PJSIP_PORT = PJSIP_PORT|default('5060') -%}
+{%- set PJSIP_USER_AGENT = PJSIP_USER_AGENT|default('Asterisk') -%}
+
+[global]
+type=global
+debug=False
+user_agent={{ PJSIP_USER_AGENT }}
+
+[transport-udp]
+type=transport
+protocol=udp
+bind=0.0.0.0:{{ PJSIP_PORT }}
+
+[transport-tcp]
+type=transport
+protocol=tcp
+bind=0.0.0.0:{{ PJSIP_PORT }}
+
+[transport-ws]
+type=transport
+protocol=ws
+bind=0.0.0.0

@@ -1,0 +1,8 @@
+{%- set RTP_START_RANGE = RTP_START_RANGE|default('5000') -%}
+{%- set RTP_END_RANGE = RTP_END_RANGE|default('31000') -%}
+
+[general]
+
+rtpstart={{ RTP_START_RANGE }}
+rtpend={{ RTP_END_RANGE }}
+stunaddr=stun.l.google.com:19302

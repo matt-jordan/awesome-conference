@@ -1,0 +1,97 @@
+html, body {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    background: #275480;
+    padding-bottom: 50px;
+}
+
+/* keep the webcam snapper video hidden */
+camera {
+    display: none;
+}
+
+/* Person picture and video cards */
+
+.main {
+    height: 70vh;
+}
+
+.people {
+    height: 20vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.person {
+    background: rgb(94, 94, 94); /* same as grayscale respoke logo */
+    color: #33699E;
+    border: 0;
+    border-bottom: 3px solid #1C364E;
+    width: 160px;
+    height: 120px;
+    display: inline-block !important;
+    margin: 10px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 40px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.videoSource {
+    background: rgb(94, 94, 94); /* same as grayscale respoke logo */
+    color: #33699E;
+    outline-color: orange;
+    outline-style: solid;
+    border: 0;
+    border-bottom: 3px solid #1C364E;
+    width: 160px;
+    height: 120px;
+    display: inline-block !important;
+    margin: 10px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 40px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.img, video {
+    margin: 0;
+    padding: 0;
+}
+img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+video {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 40px;
+}
+
+/* Footer */
+
+.respoke, .github, .instructions {
+    position: fixed;
+    bottom: 8px;
+    color: #ccc !important;
+    text-decoration: none;
+}
+.github {
+    left: 13px;
+}
+.respoke {
+    right: 13px;
+}
+.instructions {
+    right: 50%;
+    margin-right: -100px;
+    width: 200px;
+    font-weight: normal;
+}

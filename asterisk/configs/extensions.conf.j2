@@ -1,0 +1,9 @@
+[globals]
+
+APPLICATION_NAME={{ APPLICATION_NAME }}
+
+[inbound]
+
+exten => {{ RESPOKE_ENDPOINT }},1,NoOp()
+ same => n,Stasis(${APPLICATION_NAME})
+ same => n,Hangup()
