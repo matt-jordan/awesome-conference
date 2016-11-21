@@ -6,6 +6,8 @@ An awesome conference, consisting of:
 
 To run the awesome conference, you will need a valid [Respoke](https://www.respoke.io) account.
 
+![A picture of people in an awesome conference. And me with a beard. No shave november, yo.](https://github.com/matt-jordan/awesome-conference/blob/master/awesome-conference.png)
+
 ## Asterisk/ARI
 
 Asterisk is deployed in a Docker container bound to the host network. The configuration of Asterisk is static, and all relevant configuration bits as well as control of the ARI application is done by the remote application implemented in `awesome-conference`.
